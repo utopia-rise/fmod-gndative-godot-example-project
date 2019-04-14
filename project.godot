@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="fmod-gndative-godot-example-project"
 config/icon="res://icon.png"
 
+[autoload]
+
+Fmod="*res://main/backend/sound/Fmod.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
