@@ -1,0 +1,18 @@
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=false
+
+[entry]
+
+X11.64="res://lib/linux/libGodotFmod.linux.so"
+OSX.64="res://lib/osx/libGodotFmod.osx.dylib"
+Windows.64="res://lib/windows/libGodotFmod.windows.dll"
+
+[dependencies]
+
+X11.64=[  ]
+Windows.64=[  ]
+OSX.64=[  ]
