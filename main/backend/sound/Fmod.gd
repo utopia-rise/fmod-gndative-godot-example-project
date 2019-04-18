@@ -23,7 +23,7 @@ func playOneShotWithParams(eventPath: String, object, params: Dictionary):
 func playOneShotAttached(eventPath: String, object):
 	godot_fmod.playOneShotAttached(eventPath, object)
 
-func playOneShotAttachedWithParams(eventPath: String, object, params: Dictionary):
+func playOneShotAttachedWithParams(eventPath: String, object: Object, params: Dictionary):
 	godot_fmod.playOneShotAttachedWithParams(eventPath, object, params)
 
 func createEventInstance(uuid: String, eventPath: String):
@@ -49,6 +49,12 @@ func setEventPitch(uuid:String, pitch: float):
 
 func addListener(object):
 	godot_fmod.addListener(object)
+
+func attachInstanceToNode(uuid: String, object: Object):
+	godot_fmod.attachInstanceToNode(uuid, object)
+
+func detachInstanceFromNode(uuid: String):
+	godot_fmod.detachInstanceFromNode(uuid)
 
 func loadSound(uuid: String, path:String, mode:String):
 	return godot_fmod.loadSound(uuid, path, mode)
