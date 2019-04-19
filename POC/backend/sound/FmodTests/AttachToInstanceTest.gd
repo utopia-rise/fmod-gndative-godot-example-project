@@ -16,6 +16,8 @@ func _ready():
 	# Create event instance
 	var my_music_event = Fmod.createEventInstance("my_music_event", "event:/Music/Level 02")
 	
+	Fmod.startEvent(my_music_event)
+	
 	# attach instance to node
 	Fmod.attachInstanceToNode(my_music_event, $NodeToAttach)
 	
@@ -26,4 +28,5 @@ func _ready():
 	t.start()
 	yield(t, "timeout")
 	
-	Fmod.detachInstanceFromNode("test")
+	Fmod.detachInstanceFromNode(my_music_event)
+	Fmod.stopEvent(my_music_event, FmodFlags.fmodStudioStopModes.FMOD_STUDIO_STOP_IMMEDIATE)
