@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://POC/backend/sound/FmodTests/AttachToInstanceTest.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://POC/backend/sound/FmodTests/NodeToAttach.gd" type="Script" id=3]
+[ext_resource path="res://engineButtonIcon.png" type="Texture" id=4]
 
 [node name="AttachToInstanceTest" type="Node2D"]
 script = ExtResource( 1 )
@@ -11,4 +12,9 @@ script = ExtResource( 1 )
 position = Vector2( 63.6181, 193.126 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
+
+[node name="Listener" type="Sprite" parent="."]
+position = Vector2( 966.766, 57.9378 )
+scale = Vector2( 3.13007, 5.11813 )
+texture = ExtResource( 4 )
 

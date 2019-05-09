@@ -7,12 +7,20 @@ reloadable=false
 
 [entry]
 
+Android.armeabi-v7a="res://lib/android/armeabi-v7a/libandroid_fmod_gdnative.so"
+Android.arm64-v8a="res://lib/android/arm64-v8a/libandroid_fmod_gdnative.so"
 X11.64="res://lib/linux/libGodotFmod.linux.so"
 OSX.64="res://lib/osx/libGodotFmod.osx.dylib"
 Windows.64="res://lib/windows/libGodotFmod.windows.dll"
+iOS.armv7="res://lib/iOS/libGodotFmod.ios.a"
+iOS.arm64="res://lib/iOS/libGodotFmod.ios.a"
 
 [dependencies]
 
+Android.armeabi-v7a=[ "res://lib/android/armeabi-v7a/libfmod.so", "res://lib/android/armeabi-v7a/libfmodstudio.so" ]
+Android.arm64-v8a=[ "res://lib/android/arm64-v8a/libfmod.so", "res://lib/android/arm64-v8a/libfmodstudio.so" ]
 X11.64=[  ]
 Windows.64=[  ]
 OSX.64=[  ]
+iOS.armv7=[ "res://lib/iOS/libfmodstudio_iphoneos.a", "res://lib/iOS/libfmod_iphoneos.a", "res://lib/iOS/libgodot-cpp.ios.release.a" ]
+iOS.arm64=[ "res://lib/iOS/libfmodstudio_iphoneos.a", "res://lib/iOS/libfmod_iphoneos.a", "res://lib/iOS/libgodot-cpp.ios.release.a" ]

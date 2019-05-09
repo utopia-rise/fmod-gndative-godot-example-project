@@ -6,15 +6,15 @@ func _ready():
 	Fmod.init(1024, FmodFlags.FmodStudioInitFlags.FMOD_STUDIO_INIT_LIVEUPDATE, FmodFlags.FmodInitFlags.FMOD_INIT_NORMAL)
 	
 	# load banks
-	Fmod.loadbank("./POC/backend/sound/Banks/Desktop/Music.bank", FmodFlags.FmodLoadBankFlags.FMOD_STUDIO_LOAD_BANK_NORMAL)
+	Fmod.loadbank("./POC/backend/sound/Banks/Desktop/SFX.bank", FmodFlags.FmodLoadBankFlags.FMOD_STUDIO_LOAD_BANK_NORMAL)
 	Fmod.loadbank("./POC/backend/sound/Banks/Desktop/Master Bank.bank", FmodFlags.FmodLoadBankFlags.FMOD_STUDIO_LOAD_BANK_NORMAL)
 	Fmod.loadbank("./POC/backend/sound/Banks/Desktop/Master Bank.strings.bank", FmodFlags.FmodLoadBankFlags.FMOD_STUDIO_LOAD_BANK_NORMAL)
 	
 	# register listener
-	Fmod.addListener(self)
+	Fmod.addListener($Listener)
 	
 	# Create event instance
-	var my_music_event = Fmod.createEventInstance("my_music_event", "event:/Music/Level 02")
+	var my_music_event = Fmod.createEventInstance("my_music_event", "event:/Weapons/Machine Gun")
 	
 	Fmod.startEvent(my_music_event)
 	
