@@ -7,13 +7,13 @@ func _init():
 	if OS.get_name() == "Android":
 		local_path_prefix = "file:///android_asset/"
 
-func init(numOfChannels: int, studioFlag: String, fmodFlag: String):
+func init(numOfChannels: int, studioFlag: int, fmodFlag: int):
 	godot_fmod.init(1024, studioFlag, fmodFlag)
 
-func setSoftwareFormat(sampleRate: int, speakerMode: String, numRowSpeakers: int):
+func setSoftwareFormat(sampleRate: int, speakerMode: int, numRowSpeakers: int):
 	godot_fmod.setSoftwareFormat(sampleRate, speakerMode, numRowSpeakers)
 
-func loadbank(pathToBank: String, loadBankFlag: String):
+func loadbank(pathToBank: String, loadBankFlag: int):
 	godot_fmod.loadbank(getPath(pathToBank), loadBankFlag)
 
 func unloadBank(pathToBank: String):
@@ -37,7 +37,7 @@ func createEventInstance(uuid: String, eventPath: String):
 func startEvent(uuid: String):
 	godot_fmod.startEvent(uuid)
 
-func stopEvent(uuid: String, stopMode: String):
+func stopEvent(uuid: String, stopMode: int):
 	godot_fmod.stopEvent(uuid, stopMode)
 
 func releaseEvent(uuid: String):
@@ -61,7 +61,7 @@ func attachInstanceToNode(uuid: String, object: Object):
 func detachInstanceFromNode(uuid: String):
 	godot_fmod.detachInstanceFromNode(uuid)
 
-func loadSound(uuid: String, path:String, mode:String):
+func loadSound(uuid: String, path:String, mode: int):
 	return godot_fmod.loadSound(uuid, getPath(path), mode)
 
 func playSound(uuid: String):
@@ -81,6 +81,9 @@ func setSoundVolume(uuid: String, volume: float):
 
 func setSoundPitch(uuid: String, pitch: float):
 	godot_fmod.setSoundPitch(uuid, pitch)
+
+func setSound3DSettings(dopplerScale: float, distanceFactor: float, rollOffScale: float):
+	godot_fmod.setSound3DSettings(dopplerScale, distanceFactor, rollOffScale)
 
 func getPath(path: String):
 	if path.left(2) == "./":

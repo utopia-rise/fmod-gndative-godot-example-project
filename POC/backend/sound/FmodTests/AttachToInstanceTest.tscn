@@ -14,7 +14,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Listener" type="Sprite" parent="."]
-position = Vector2( 966.766, 57.9378 )
+position = Vector2( 998.53, 440.867 )
 scale = Vector2( 3.13007, 5.11813 )
 texture = ExtResource( 4 )
 
